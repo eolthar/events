@@ -2,7 +2,7 @@
     "name": "@eolthar/events",
     "description": "A lightweight, high-performance event system for fast and scalable projects",
     "version": "1.0.0",
-    "main": "src/main.js",
+    "main": "main.js",
     "author": "Mlad (https://github.com/eolthar)",
     "license": "Apache-2.0"
 }
