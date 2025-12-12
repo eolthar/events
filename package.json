@@ -4,5 +4,14 @@
     "version": "1.0.0",
     "main": "main.js",
     "author": "Mlad (https://github.com/eolthar)",
-    "license": "Apache-2.0"
+    "repository": "https://github.com/eolthar/events",
+    "license": "Apache-2.0",
+    "keywords": [
+        "events",
+        "emitter",
+        "eventemitter",
+        "pubsub",
+        "lightweight",
+        "performance"
+    ]
 }
