@@ -5,7 +5,7 @@
     "main": "main.js",
     "author": "Mlad (https://github.com/eolthar)",
     "repository": "https://github.com/eolthar/events",
-    "license": "Apache-2.0",
+    "license": "MIT",
     "keywords": [
         "events",
         "emitter",
@@ -14,4 +14,5 @@
         "lightweight",
         "performance"
     ]
+
 }
