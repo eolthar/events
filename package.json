@@ -1,7 +1,7 @@
 {
     "name": "@eolthar/events",
-    "description": "A lightweight, high-performance event system for fast and scalable projects",
-    "version": "1.0.0",
+    "description": "A lightweight, high-performance event system for fast and scalable projects.",
+    "version": "1.0.1",
     "main": "main.js",
     "author": "Mlad (https://github.com/eolthar)",
     "repository": "https://github.com/eolthar/events",
@@ -14,5 +14,4 @@
         "lightweight",
         "performance"
     ]
-
 }

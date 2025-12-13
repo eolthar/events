@@ -1,21 +1,17 @@
 const createEmitter = () => {
-    const events = {};
+    const e = {};
     return {
-        on(event, cb) {
-            (events[event] || (events[event] = [])).push(cb);
+        on(event, listener) {
+            (e[event] || (e[event] = [])).push(listener);
             return () => {
-                const arr = events[event];
-                const idx = arr.indexOf(cb);
-                if (idx !== -1) arr.splice(idx, 1);
+                const a = e[event];
+                const i = a.indexOf(listener);
+                if (i !== -1) a.splice(i, 1);
             };
         },
         emit(event, ...args) {
-            const arr = events[event];
-            if (arr) {
-                for (let i = 0, l = arr.length; i < l; i++) {
-                    arr[i](...args);
-                }
-            }
+            const a = e[event];
+            if (a) for (let i = 0, l = a.length; i < l; i++) a[i](...args);
         }
     };
 };

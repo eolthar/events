@@ -31,5 +31,5 @@ emitter.emit("hello", "Bob"); // nothing happens
 Creates a new event emitter instance.
 
 #### Methods
-- **`on(event, callback)`** - Subscribes to a named event. Returns a function that can be called to unsubscribe.
+- **`on(event, listener)`** - Subscribes to a named event. Returns a function that can be called to unsubscribe.
 - **`emit(event, ...args)`** - Emits the specified event with any number of arguments. Calls all registered listeners in the order they were added.
