@@ -1,17 +1,19 @@
 {
-    "name": "@eolthar/events",
-    "description": "A lightweight, high-performance event system for fast and scalable projects.",
-    "version": "1.0.1",
+    "name": "@eolthar/hilger",
+    "description": "A lightweight, high-performance event emitter for fast and scalable projects.",
+    "version": "1.0.0",
     "main": "main.js",
     "author": "Mlad (https://github.com/eolthar)",
-    "repository": "https://github.com/eolthar/events",
+    "repository": "https://github.com/eolthar/hilger",
     "license": "MIT",
     "keywords": [
         "events",
         "emitter",
         "eventemitter",
+        "emit",
         "pubsub",
-        "lightweight",
-        "performance"
+        "fast",
+        "performance",
+        "hilger"
     ]
 }
