@@ -1,8 +1,9 @@
 {
     "name": "@eolthar/events",
     "description": "A lightweight, high-performance event emitter for fast and scalable projects.",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "main": "main.js",
+    "types": "types.d.ts",
     "author": "Mlad (https://github.com/eolthar)",
     "repository": "https://github.com/eolthar/events",
     "license": "MIT",

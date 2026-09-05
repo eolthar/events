@@ -1,5 +1,4 @@
 # @eolthar/events
-
 A lightweight, high-performance event emitter for fast and scalable projects.
 
 ```
@@ -7,7 +6,6 @@ npm i @eolthar/events
 ```
 
 ## Benchmark
-
 | Category                          | @eolthar/events |     tseep | EventEmitter3 |    NanoEvents |      mitt |
 | :-------------------------------- | --------------: | --------: | ------------: | ------------: | --------: |
 | **1. Mass subscription and emit** |   **4 151 932** | 3 875 026 |     3 225 172 |     3 774 587 | 3 276 026 |
@@ -18,10 +16,12 @@ npm i @eolthar/events
 | **6. emit (10 arguments)**        |   **9 183 703** | 7 561 947 |     4 503 834 |     6 767 050 | 6 023 215 |
 
 ## Usage
+The full API, with typed signatures and behavioural notes, is listed in the [type declarations](https://github.com/eolthar/events/blob/main/types.d.ts).
 
 ```js
 const { Emitter } = require("@eolthar/events");
 
+// Create an emitter
 const emitter = new Emitter();
 
 function handler(name) {
@@ -41,60 +41,5 @@ emitter.off("hello", handler);
 emitter.emit("hello", "Bob"); // nothing happens
 ```
 
-## API
-
-### `new Emitter()`
-
-Creates a new event emitter instance.
-
-### `emitter.on(event, listener)`
-
-Subscribes a listener to a named event.
-
-```js
-emitter.on("data", (value) => console.log(value));
-```
-
-### `emitter.off(event, listener)`
-
-Removes a specific listener from an event.
-
-```js
-function handler(value) {
-    console.log(value);
-}
-
-emitter.on("data", handler);
-emitter.off("data", handler);
-```
-
-### `emitter.once(event, listener)`
-
-Subscribes a listener that is automatically removed after the first call. Returns the internal wrapper function, which can be passed to `off` to manually remove the listener before it fires.
-
-```js
-emitter.once("connect", () => console.log("connected!"));
-emitter.emit("connect"); // connected!
-emitter.emit("connect"); // nothing happens
-```
-
-### `emitter.emit(event, ...args)`
-
-Emits the specified event, calling all registered listeners in the order they were added.
-
-```js
-emitter.emit("data", 1, 2, 3);
-```
-
-### `emitter.clear(event?)`
-
-Removes all listeners for a specific event. If no event is provided, clears all events.
-
-```js
-emitter.clear("data"); // removes all listeners for "data"
-emitter.clear(); // removes everything
-```
-
 ## License
-
 MIT
